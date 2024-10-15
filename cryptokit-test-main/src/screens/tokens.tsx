@@ -6,6 +6,7 @@ import {
   StyleSheet,
   StatusBar,
   Text,
+  Button,
 } from 'react-native';
 import { useQuery, gql } from '@apollo/client';
 import TokenCard from './token-card';
@@ -54,6 +55,11 @@ const Tokens: React.FC = () => {
     navigation.navigate('SingleToken', { tokenId: id });
   };
 
+  const navigateToSettings = () => {
+    navigation.navigate('Settings');
+  };
+
+
   const renderTokenCard = ({ item }: { item: { id: string; name: string; symbol: string; price: number } }) => (
     <TokenCard
       token={item}
@@ -73,6 +79,7 @@ const Tokens: React.FC = () => {
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Tokens</Text>
           <Text style={styles.headerSubtitle}>Listing and managing your favorite tokens</Text>
+          <Button title="Go to Settings" onPress={navigateToSettings} />
         </View>
         <FlatList
           data={data.tokens}
