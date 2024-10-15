@@ -36,8 +36,8 @@ The Crypto Tokens App is a React Native application that provides users with a u
 
 1. **Clone the Repository**:
    ```bash
-   git clone <your-repository-url>
-   cd <your-repository-name>
+   git clone https://github.com/dafejimi/crypto-tokens-app/tree/main
+   cd crypto-tokens-app
    ```
 
 2. **Navigate to the Backend Directory**:
